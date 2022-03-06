@@ -94,6 +94,16 @@
                         color: #aac33e;
                     }
                 }
+                &.mi_icon {
+                    > a {
+                        i {
+                            width: 31px;
+                            font-size: 24px;
+                            padding-left: 0px;
+                            text-align: center;
+                        }
+                    }
+                }
             }
         }
     }
