@@ -1,6 +1,11 @@
 .ico {
     @include Inline-block-config;
     @include Hide_txt;
+    &.head00 {
+        @include Background($sprite: 'ico-head00');
+        width: 31px;
+        height: 25px;
+    }
     &.head01 {
         @include Background($sprite: 'ico-head01');
         width: 31px;
@@ -150,6 +155,9 @@
     }
 }
 .opened {
+    .head00 {
+        @include Background($sprite: 'ico-head00-on');
+    }
     .head01 {
         @include Background($sprite: 'ico-head01-on');
     }

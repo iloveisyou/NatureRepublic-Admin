@@ -316,6 +316,63 @@ textarea::placeholder {
     color: #fff456 !important;
 }
 
+@mixin badge_arrow {
+    content: '';
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    margin-right: 4px;
+    line-height: 0;
+    vertical-align: middle;
+    font-size: 0;
+}
+.badge {
+    &_an {
+        color: #89b03f !important;
+        &:before {
+            @include badge_arrow();
+            height: 2px;
+            border-bottom: 2px solid #89b03f;
+        }
+    }
+    &_aup {
+        color: #f04040 !important;
+        &:before {
+            @include badge_arrow();
+            height: 2px;
+            border-style: solid;
+            border-width: 0 4px 6px;
+            border-color: transparent transparent #f04040 transparent;
+            line-height: 0;
+            vertical-align: middle;
+            font-size: 0;
+        }
+    }
+    &_adn {
+        color: #117ef9 !important;
+        &:before {
+            @include badge_arrow();
+            height: 2px;
+            border-style: solid;
+            border-width: 6px 4px 0;
+            border-color: #117ef9 transparent transparent transparent;
+            line-height: 0;
+            vertical-align: middle;
+            font-size: 0;
+        }
+    }
+}
+.wt {
+    &_100 {
+        &pc {
+            width: 100% !important;
+        }
+        &px {
+            width: 100px !important;
+        }
+    }
+}
+
 .pcOnly {
     display: none;
 }
@@ -335,6 +392,33 @@ textarea::placeholder {
         display: block;
         font: 0/0 a;
         background-color: rgba(0, 0, 0, 0);
+    }
+}
+
+//hn add220303
+.blind {
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 0;
+    height: 0;
+    padding: 0;
+    margin: 0;
+    background-color: transparent;
+    border: 0 solid transparent;
+    line-height: 0;
+    font-size: 0;
+}
+.dp {
+    &-none {
+        display: none !important;
+    }
+    &-block {
+        display: block !important;
+    }
+    &-inlineBlock {
+        display: inline-block !important;
     }
 }
 

@@ -133,6 +133,71 @@
                 }
             }
         }
+        //hn add220303
+        &.td-align-right {
+            table {
+                th {
+                    border-left: 1px solid #ddd;
+                }
+                td {
+                    text-align: right;
+                }
+                tbody {
+                    tr {
+                        td {
+                            &:first-child {
+                                span {
+                                    display: inline-block;
+                                    width: 200px;
+                                    padding-left: 10px;
+                                    text-align: left;
+                                }
+                            }
+                        }
+                        &.tfoot {
+                            td {
+                                background-color: #f5f5f5; //#e7e7e7;
+                                font-weight: 700;
+                                color: #333;
+                            }
+                        }
+                    }
+                    &.sub {
+                        tr {
+                            td {
+                                //background-color:#f5f5f5;
+                                &:first-child {
+                                    span {
+                                        padding-left: 25px;
+                                    }
+                                }
+                            }
+                            &:first-child {
+                                td {
+                                    &:first-child {
+                                        span {
+                                            padding-left: 10px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    &.tfoot {
+                        tr {
+                            td {
+                                background-color: #f5f5f5; //#e7e7e7;
+                                font-weight: 700;
+                                color: #333;
+                                span {
+                                    padding-left: 0 !important;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
     &.toggle-area {
         display: none;
@@ -202,6 +267,40 @@
     }
     .minus-point {
         color: #f01d11;
+    }
+
+    .table-scroll {
+        &.h {
+            overflow-x: auto;
+            table {
+                width: 2200px;
+            }
+        }
+    }
+    &.th-small {
+        table {
+            thead {
+                th {
+                    height: 40px !important;
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+}
+
+//hn add220303
+.div-w {
+    //background-color:red;
+    .div-i {
+        display: inline-block;
+        h4 {
+            display: inline-block;
+            font-weight: 700;
+        }
+        & + .div-i {
+            padding-left: 20px;
+        }
     }
 }
 
