@@ -1528,6 +1528,12 @@
 				 menu_do_collapse($submenu, $this, submenu_options);
 			 }
 		 });
+
+		 //hn add220303
+		 $submenu.find("li a").click(function(ev){
+			$(this).parents("ul").prev().click();
+
+		 });
  
 	 });
  

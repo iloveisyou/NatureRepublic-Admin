@@ -977,6 +977,7 @@ float: left;
   -webkit-opacity: 1;
   -moz-opacity: 1;
   opacity: 1;
+  padding:20px 0;
 }
 .page-container.sidebar-is-collapsing .sidebar-user-info {
   padding: 13.63636364px 5px;
