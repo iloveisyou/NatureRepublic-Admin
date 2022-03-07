@@ -122,6 +122,17 @@ $(function(){
 			</li>
 			<li>
 				<a href="" title="" data-menunum="9"><i class="ico head08"></i><span>통계</span></a>
+				<ul class="has-sub">
+					<li><a href="../statistic/statistic_sales.html" title="" data-menunum="1"><span>매출 통계</span></a></li>
+					<li><a href="../statistic/statistic_product.html" title="" data-menunum="2"><span>상품별 통계</span></a></li>
+					<li><a href="../statistic/statistic_category.html" title="" data-menunum="3"><span>카테고리별 통계</span></a></li>
+					<li><a href="../statistic/statistic_event.html" title="" data-menunum="4"><span>행사 통계</span></a></li>
+					<li><a href="../statistic/statistic_member.html" title="" data-menunum="5"><span>회원별 매출 분석</span></a></li>
+					<li><a href="../statistic/statistic_order.html" title="" data-menunum="6"><span>주문건별 매출 분석</span></a></li>
+					<li><a href="../statistic/statistic_influx_ga.html" title="" data-menunum="7"><span>유입 분석(GA)</span></a></li>
+					<li><a href="../statistic/statistic_visit.html" title="" data-menunum="8"><span>방문 분석</span></a></li>
+					<li><a href="../statistic/statistic_visit_ga.html" title="" data-menunum="9"><span>방문 분석(GA)</span></a></li>
+				</ul>
 			</li>
 
 			
