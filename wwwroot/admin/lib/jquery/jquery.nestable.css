@@ -44,7 +44,7 @@
     color: #2ea8e5;
     background: #fff; }
 
-.dd-item > button {
+.dd-item > button,.dd-item > a {
   position: relative;
   cursor: pointer;
   float: left;
@@ -61,15 +61,15 @@
   line-height: 1;
   text-align: center;
   font-weight: bold; }
-  .dd-item > button:before {
+  .dd-item > button:before, .dd-item > a:before {
     display: block;
     position: absolute;
     width: 100%;
     text-align: center;
     text-indent: 0; }
-  .dd-item > button.dd-expand:before {
+  .dd-item > button.dd-expand:before, .dd-item > a.dd-expand:before {
     content: '+'; }
-  .dd-item > button.dd-collapse:before {
+  .dd-item > button.dd-collapse:before, .dd-item > a.dd-collapse:before {
     content: '-'; }
 
 .dd-expand {
