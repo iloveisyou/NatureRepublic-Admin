@@ -110,7 +110,7 @@ $(function(){
 				<a href="" title="" data-menunum="7"><i class="ico head07"></i><span>마케팅 관리</span></a>
 			</li>
 			<li class="mi_icon">
-				<a href="" title="" data-menunum="8"><i class="material-icons">legend_toggle</i><span>현황 Old</span></a>
+				<a href="" title="" data-menunum="8"><i class="material-icons">legend_toggle</i><span>(추가)현황</span></a>
 				<ul class="has-sub">
 					<li><a href="../status/status_sales.html" title="" data-menunum="1"><span>매출 현황</span></a></li>
 					<li><a href="../status/status_product.html" title="" data-menunum="2"><span>상품 매출 현황</span></a></li>
@@ -123,7 +123,7 @@ $(function(){
 				</ul>
 			</li>
 			<li>
-				<a href="" title="" data-menunum="9"><i class="ico head08"></i><span>통계</span></a>
+				<a href="" title="" data-menunum="9"><i class="ico head08"></i><span>통계 Old</span></a>
 				<ul class="has-sub">
 					<li><a href="../statistic/statistic_sales.html" title="" data-menunum="1"><span>매출 통계</span></a></li>
 					<li><a href="../statistic/statistic_product.html" title="" data-menunum="2"><span>상품별 통계</span></a></li>
@@ -137,7 +137,7 @@ $(function(){
 				</ul>
 			</li>
 			<li>
-				<a href="" title="" data-menunum="10"><i class="ico head08"></i><span>통계 new</span></a>
+				<a href="" title="" data-menunum="10"><i class="ico head08"></i><span>(추가)통계 new</span></a>
 				<ul class="has-sub">
 					<li><a href="../statistic/statistic_sales_time.html" title="" data-menunum="1"><span>(추가)일자/시간대별 매출</span></a></li>
 					<li><a href="../statistic/statistic_sales_order.html" title="" data-menunum="1"><span>(추가)주문별 매출</span></a></li>
