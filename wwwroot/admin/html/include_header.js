@@ -118,6 +118,8 @@ $(function(){
 					<li><a href="../status/status_visit.html" title="" data-menunum="4"><span>방문 현황</span></a></li>
 					<li><a href="../status/status_visit_ga.html" title="" data-menunum="5"><span>방문 현황(GA)</span></a></li>
 					<li><a href="../status/status_keyword.html" title="" data-menunum="6"><span>키워드 현황</span></a></li>
+					<li><a href="../status/status_productType.html" title="" data-menunum="7"><span>(추가)상품별 매출</span></a></li>
+					<li><a href="../status/status_ cancel_return.html" title="" data-menunum="7"><span>(추가)취소/반품 요청</span></a></li>
 				</ul>
 			</li>
 			<li>
@@ -132,6 +134,18 @@ $(function(){
 					<li><a href="../statistic/statistic_influx_ga.html" title="" data-menunum="7"><span>유입 분석(GA)</span></a></li>
 					<li><a href="../statistic/statistic_visit.html" title="" data-menunum="8"><span>방문 분석</span></a></li>
 					<li><a href="../statistic/statistic_visit_ga.html" title="" data-menunum="9"><span>방문 분석(GA)</span></a></li>
+				</ul>
+			</li>
+			<li>
+				<a href="" title="" data-menunum="10"><i class="ico head08"></i><span>통계 new</span></a>
+				<ul class="has-sub">
+					<li><a href="../statistic/statistic_sales_time.html" title="" data-menunum="1"><span>(추가)일자/시간대별 매출</span></a></li>
+					<li><a href="../statistic/statistic_sales_order.html" title="" data-menunum="1"><span>(추가)주문별 매출</span></a></li>
+					<li><a href="../statistic/statistic_sales_category.html" title="" data-menunum="1"><span>(추가)카테고리별 매출</span></a></li>
+					<li><a href="../statistic/statistic_sales_payment.html" title="" data-menunum="1"><span>(추가)결제수단별 매출</span></a></li>
+					<li><a href="../statistic/statistic_sales_event.html" title="" data-menunum="1"><span>(추가)이벤트/프로모션 매출</span></a></li>
+					<li><a href="../statistic/statistic_sales_member.html" title="" data-menunum="1"><span>(추가)회원별 매출</span></a></li>
+					<li><a href="../statistic/statistic_keyword.html" title="" data-menunum="1"><span>(추가)검색 키워드</span></a></li>
 				</ul>
 			</li>
 

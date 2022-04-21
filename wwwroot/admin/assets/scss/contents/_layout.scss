@@ -161,3 +161,13 @@
         background-color: rgba(0, 0, 0, 0);
     }
 }
+
+.layout {
+    display: flex;
+    &.h {
+        flex-flow: row nowrap;
+    }
+    > .layout-c {
+        flex: 1;
+    }
+}
