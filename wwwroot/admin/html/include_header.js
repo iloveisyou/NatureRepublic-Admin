@@ -110,7 +110,7 @@ $(function(){
 				<a href="" title="" data-menunum="7"><i class="ico head07"></i><span>마케팅 관리</span></a>
 			</li>
 			<li class="mi_icon">
-				<a href="" title="" data-menunum="8"><i class="material-icons">legend_toggle</i><span>현황</span></a>
+				<a href="" title="" data-menunum="8"><i class="material-icons">legend_toggle</i><span>현황 Old</span></a>
 				<ul class="has-sub">
 					<li><a href="../status/status_sales.html" title="" data-menunum="1"><span>매출 현황</span></a></li>
 					<li><a href="../status/status_product.html" title="" data-menunum="2"><span>상품 매출 현황</span></a></li>
