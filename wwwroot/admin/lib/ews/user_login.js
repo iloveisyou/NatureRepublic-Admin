@@ -285,6 +285,7 @@ var ewsLogin = ewsLogin || {};
 					var o = {
 						pct: currentProgress
 					};
+					console.log("////");
 					
 					TweenMax.to(o, .7, {
 						pct: parseInt(pct, 10),

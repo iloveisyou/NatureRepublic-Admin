@@ -24,15 +24,19 @@ jQuery.extend(public_vars, {
 
 function show_sidebar_menu(with_animation)
 {
-	if(isxs())
+	if(isxs()){
 		return;
-
+	}
 	if( ! with_animation)
 	{
 		public_vars.$pageContainer.removeClass(public_vars.sidebarCollapseClass);
 	}
 	else
 	{
+
+		console.log("22222");
+		console.log($logo);
+
 		if(public_vars.$mainMenu.data('is-busy') || ! public_vars.$pageContainer.hasClass(public_vars.sidebarCollapseClass))
 			return;
 
@@ -73,9 +77,13 @@ function show_sidebar_menu(with_animation)
 		{
 			$logo.css({width: 'auto', height: 'auto'});
 
-			TweenMax.set($logo, {css: {scaleY: 0}});
+			// tweenmax제거 TweenMax.set($logo, {css: {scaleY: 0}});
+			$logo.css({'scaleY' : '0'});
+			console.log($logo);
 
-			TweenMax.to($logo, (public_vars.sidebarTransitionTime/2) / 1100, {css: {scaleY: 1}});
+			
+			// tweenmax제거 TweenMax.to($logo, (public_vars.sidebarTransitionTime/2) / 1100, {css: {scaleY: 1}});
+			$logo.animate({scaleY: '1'},1000);
 
 			// Third Phase
 			setTimeout(function(){
@@ -173,7 +181,8 @@ function hide_sidebar_menu(with_animation)
 		public_vars.$pageContainer.addClass(public_vars.sidebarOnTransitionClass);
 		setTimeout(function(){ public_vars.$pageContainer.addClass(public_vars.sidebarOnHideTransitionClass); }, 1);
 
-		TweenMax.to($submenus, public_vars.sidebarTransitionTime / 1100, {css: {height: 0}});
+		// tweenmax제거 TweenMax.to($submenus, public_vars.sidebarTransitionTime / 1100, {css: {height: 0}});
+		$submenus.animate({ height: '0' }, 1000);
 
 		$logo.transit({scale: [1,0], perspective: 300}, public_vars.sidebarTransitionTime/2);
 		$logo_env.transit({padding: logo_env_padding}, public_vars.sidebarTransitionTime);

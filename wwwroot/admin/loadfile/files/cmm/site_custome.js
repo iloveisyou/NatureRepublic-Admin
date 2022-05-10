@@ -5,6 +5,7 @@
  **/
 
  var public_vars = public_vars || {};
+ var Sine = { easeIn:'', easeInOut:'', easeOut:'' }; // tweenmax제거 를 위한 배열
 
  ;(function($, window, undefined){
  
@@ -219,6 +220,7 @@
 		 // End of: Added on v1.1.4
  
  
+		 /** TweenMax제거, 현재 사용않하는 라이브러리로 판단 
 		 $('body').on('click', '.panel > .panel-heading > .panel-options > a[data-rel="reload"]', function(ev)
 		 {
 			 ev.preventDefault();
@@ -282,6 +284,7 @@
 				 $panel.removeClass('panel-collapse');
 			 }
 		 });
+		 */
  
  
  
@@ -1311,6 +1314,7 @@
  
  
 		 // Modal Static
+		 /** tweenmax제거, 사용않하는 모달로 판단
 		 public_vars.$body.on('click', '.modal[data-backdrop="static"]', function(ev)
 		 {
 			 if( $(ev.target).is('.modal') )
@@ -1324,6 +1328,7 @@
 				 tt.play();
 			 }
 		 });
+		 */
  
  
 		 // Added on v1.1
@@ -1605,14 +1610,18 @@
 		 delete props_to['top'];
 	 }
  
-	 TweenMax.set($submenu, {css: props_from});
- 
+	 //tweenmax제거 TweenMax.set($submenu, {css: props_from});
+	 $submenu.css(props_from);
+
 	 $this.addClass(options.submenu_opened_class);
  
-	 TweenMax.to($submenu, options.submenu_open_delay, {css: props_to, ease: options.submenu_open_easing, onUpdate: ps_update, onComplete: function()
+	 /*tweenmax제거 TweenMax.to($submenu, options.submenu_open_delay, {css: props_to, ease: options.submenu_open_easing, onUpdate: ps_update, onComplete: function()
 	 {
 		 $submenu.attr('style', '');
-	 }});
+	 }});*/
+	 $submenu.animate(props_to, (options.submenu_open_delay * 1000), function(){
+		$submenu.attr('style', '');
+	 });
  }
  
  
@@ -1625,10 +1634,13 @@
  
 	 $this.removeClass(options.submenu_opened_class);
  
-	 TweenMax.to($submenu, options.submenu_open_delay, {css: {height: 0, opacity: .2}, ease: options.submenu_open_easing, onUpdate: ps_update, onComplete: function()
+	 /*tweenmax제거  TweenMax.to($submenu, options.submenu_open_delay, {css: {height: 0, opacity: .2}, ease: options.submenu_open_easing, onUpdate: ps_update, onComplete: function()
 	 {
 		 $submenu.removeClass('visible');
-	 }});
+	 }});*/
+	 $submenu.animate({height: 0, opacity: .2}, (options.submenu_open_delay * 1000), function(){
+		$submenu.removeClass('visible');
+	 });
  }
  
  
@@ -1739,13 +1751,15 @@
 	 hover_index: 4
  });
  
+
  function setup_horizontal_menu_hover($item, $sub)
  {
 	 var del = 0.5,
 		 trans_x = -10,
 		 ease = Quad.easeInOut;
  
-	 TweenMax.set($sub, {css: {autoAlpha: 0, transform: "translateX("+trans_x+"px)"}});
+	 //tweenmax제거 TweenMax.set($sub, {css: {autoAlpha: 0, transform: "translateX("+trans_x+"px)"}});
+	 $sub.css({'opacity': '0', 'transform': 'translateX('+trans_x+'px)'});
  
 	 $item.hoverIntent({
 		 over: function()
@@ -1759,7 +1773,8 @@
 			 }
  
 			 $sub.css({zIndex: ++public_vars.hover_index});
-			 TweenMax.to($sub, del, {css: {autoAlpha: 1, transform: "translateX(0px)"}, ease: ease});
+			 //tweenmax제거 TweenMax.to($sub, del, {css: {autoAlpha: 1, transform: "translateX(0px)"}, ease: ease});
+			 $sub.css({'opacity': '1', 'transform': 'translateX(0px)'});
 		 },
  
 		 out: function()
@@ -1767,11 +1782,14 @@
 			 if(isxs())
 				 return false;
  
-			 TweenMax.to($sub, del, {css: {autoAlpha: 0, transform: "translateX("+trans_x+"px)"}, ease: ease, onComplete: function()
+			 /*tweenmax제거 TweenMax.to($sub, del, {css: {autoAlpha: 0, transform: "translateX("+trans_x+"px)"}, ease: ease, onComplete: function()
 			 {
 				 TweenMax.set($sub, {css: {transform: "translateX("+trans_x+"px)"}});
 				 $sub.css({display: 'none'});
-			 }});
+			 }});*/
+			 $sub.animate({'height': 0, 'transform': 'translateX('+trans_x+'px)'}, (del * 1000), function(){
+				$sub.css({display: 'none'});
+			 });
 		 },
  
 		 timeout: 300,
@@ -2042,7 +2060,7 @@
 	 }
  }
  
- 
+ /** tweenmax제거, 로딩바 사용 안하는걸로 판단
  function show_loading_bar(options)
  {
 	 var defaults = {
@@ -2104,7 +2122,8 @@
 		 $pct.data('pct', parseInt($pct.get(0).style.width, 10));
 	 }});
  }
- 
+*/
+
  function hide_loading_bar()
  {
 	 var $ = jQuery,
